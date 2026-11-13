@@ -1,0 +1,122 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Nesten 100% like som høns css så komentaren hadde blit like uanset */
+
+body {
+    margin: 0;
+    background-color: rgb(16, 20, 23);
+}
+
+#home {
+    display: block;
+    background-color: white;
+    height: 20px;
+    width: 60px;
+    border-radius: 10px;
+    margin-right: 5px;
+    
+
+    position: relative;
+    text-align: center ;
+    margin-left: auto;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    
+}
+
+#home:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+#titel {
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin: auto;
+
+    position: relative;
+    color: black;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.text {
+    /* min height og max width og box sizing gjør so at teksten ikke hopper ut av boxsen bår du gjør browser vinduet mindre */
+    background-color: white;
+    min-height: 60px;
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+
+
+
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 33%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+
+}
+
+.img-wrapper > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-wrapper > .content {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+    transition: 200ms ease-in-out;
+}
+
+.img-wrapper:hover > img.bilde {
+    filter: blur(5px);
+}
+
+.img-wrapper > .content.fade {
+    opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade {
+    opacity: 1;
+}
